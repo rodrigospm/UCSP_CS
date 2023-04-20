@@ -1,0 +1,7 @@
+/* (Integer Equivalent of a Character) Here is a peek ahead. In this chapter you learned about 
+integers and the type int. C++ can also represent uppercase letters, 
+lowercase letters and a consider able variety of special symbols. 
+C++ uses small integers internally to represent each different charac ter. 
+The set of characters a computer uses and the corresponding integer representations for those 
+characters are called that computer's character set. You can print a character 
+by enclosing that char acter in single quotes, as with */
