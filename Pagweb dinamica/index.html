@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container-1">
+        <img class="Foto" src="man.jpeg" alt="busyman">
+        <div>
+            <h1><span id="nombres"> </span></h1>
+            <p><span id="ocupacion"></p>
+        </div>
+    </div>
+
+    <div id="parent">
+        <div id="wide">
+
+        <div class="container-resto">
+        <h2><b> CONTACTO </b></h2>
+        <p><i class="glyphicon glyphicon-phone-alt"></i> &nbsp; <span id="contacto"></p>
+        <p><i class="glyphicon glyphicon-envelope"></i> &nbsp; jose.martinez@gmail.com</p>
+        <p><i class="glyphicon glyphicon-map-marker"></i> &nbsp; <span id="nacionalidad"></p>
+        <p><i class="glyphicon glyphicon-link"></i> &nbsp; <a href="linkedin.com/jose-martinez">linkedin.com/jose-martinez</a></p>
+        </div>
+
+        <div class="container-resto">
+            <h2><b> IDIOMAS</b> </h2>
+            <p>Español Nativo</p>
+            <p>Ingles: <span id="lenguaje"></p>
+            <p>Francés: Intermedio (B2)</p>
+        </div>
+
+
+        <div class="container-ldesordenadas">
+            <h2><b> APTITUDES </b> </h2>
+            <ul id="aptitudes"> 
+                <li>Inteligencia emocional</li>
+                <li>Espiritu critico</li>
+                <li>Trabajo en equipo</li>
+                <li>Capacidad analítica</li>
+                <li>Habilidades físicas</li>
+            </ul>
+        </div>
+
+        <div class="container-ldesordenadas">
+            <h2><b> HABILIDADES </b></h2>
+            <ul id="habilidades"> 
+                <li>Acondicionamiento fisico</li>
+                <li>Creación videos deportivos</li>
+                <li>Pack office</li>
+                <li>Tennis</li>
+            </ul>
+        </div>
+
+        <div class="container-ldesordenadas">
+            <h2><b> OTROS INTERESES </b></h2>
+            <ul> 
+                <li>Creador de yincanas</li>
+                <li>Paseos ecologicos grupales</li>
+                <li>Lectura grupal en ingles</li>
+            </ul>
+        </div>
+        
+    </div>
+
+        <div id="narrow">
+        
+            <div class="container-resto">
+            <h2><b> PERFIL </b></h2>
+            <p><span id="perfil"> </p>
+            </div>
+
+            <div class="container-ldesordenadas">
+                <h2><b> EXPERIENCIA LABORAL </b></h2>
+
+                <h3><b>Trabajador social</b></h3>
+                <h4><b><i>México DF, </i></b>| <span style="color:rgb(0, 0, 0, 0.5);">2022 - Actualmente</span></h4>
+                <ul> 
+                    <li>Coordinador y mediador entre los equipos
+                    de ayuda psicológica a jovenes y niños en exclusión social </li>
+                    <li>Velar por la salud mental del equipo y de miembros
+                    involucrados en proyectos</li>
+                    <li>Mapeo de necesidades estrategicas y logicas para
+                    las diferentes áreas</li>
+                    <li>Monitor de ejercicios fisicos para adolescentes</li>
+                    <li>Programar diferentes actividades extracurriculares</li>
+                </ul>
+
+                <h3><b>Trabajador social</b></h3>
+                <h4><b>México DF,</b> | <span style="color:rgb(0, 0, 0, 0.5);">2020 - 2022</span></h4>
+                <ul> 
+                    <li>Funciones para seguimiento de casos para jovenes
+                    con problemas de adicciones </li>
+                    <li>Capacitaciones e integración vinculadas a medidas
+                    preventivas </li>
+                    <li>Recopilación de evidencias para auditorias y
+                    programas sociales </li>
+                </ul>
+
+                <h3><b>Trabajador social (Prácticas)</b></h3>
+                <h4><b><i>Zaragoza</i>, España </b>| <span style="color:rgb(0, 0, 0, 0.5);">2019 - 2020</span></h4>
+                <ul> 
+                    <li>Profesor de lengua española e inglesa para jovenes
+                    migrantes </li>
+                    <li>Monitor de activades ecológicas con adolescentes </li>
+                    <li>Coordinador de áreas deportivas </li>
+                </ul>
+                
+            </div>
+
+            <div class="container-end">
+                <h2> <b>FORMACION </b></h2>
+                <h3><b>Grado de Trabajo Social</b></h3>
+                <h4><b><i>ESMA</i>, Madrid</b> | <span style="color:rgb(0, 0, 0, 0.5);">2012 - 2015</span></h4>
+                <h3><b>Licenciatura Profesional</b></h3>
+                <h4><b><i>Universidad de la frontera</i>, México DF</b> | <span style="color:rgb(0, 0, 0, 0.5);">2011 - 2012</span></h4>
+            </div>
+
+        </div>
+      </div>
+
+</body>
+<script>
+    document.getElementById("nombres").innerHTML=localStorage.getItem("nombres");
+    document.getElementById("contacto").innerHTML=localStorage.getItem("contacto");
+    document.getElementById("lenguaje").innerHTML=localStorage.getItem("lenguaje");
+    document.getElementById("nacionalidad").innerHTML=localStorage.getItem("nacionalidad");
+    document.getElementById("perfil").innerHTML=localStorage.getItem("perfil");
+    document.getElementById("ocupacion").innerHTML=localStorage.getItem("ocupacion");
+
+    var lenguajes_programacion = localStorage.getItem("programacion").split(',');
+    var habilidades = localStorage.getItem("habilidades").split(',');
+    var aptitudes = localStorage.getItem("aptitud").split(',')
+    var ul_list = document.querySelector('#habilidades');
+    var aptitudes_list = document.querySelector('#aptitudes');
+    let li = document.createElement('li');
+    lenguajes_programacion.forEach((item) => {
+        // Add the item text
+        li.innerHTML += item;
+
+        // Add li to the ul
+        ul_list.appendChild(li);
+
+        // Reset the list item
+        li = document.createElement('li');
+    });
+    habilidades.forEach((item) => {
+        // Add the item text
+        li.innerHTML += item;
+
+        // Add li to the ul
+        ul_list.appendChild(li);
+
+        // Reset the list item
+        li = document.createElement('li');
+    });
+    aptitudes.forEach((item) => {
+        // Add the item text
+        li.innerHTML += item;
+
+        // Add li to the ul
+        aptitudes_list.appendChild(li);
+
+        // Reset the list item
+        li = document.createElement('li');
+    });
+
+    console.log(localStorage.getItem("nacimiento"));
+</script>
+
+</html>
