@@ -15,6 +15,7 @@
   <h2>Formulario</h2>
 
   <form action="index.html">  
+
   <div class="form-field">
     <label>Nombre y Apellidos</label>
     <input name="Nombres" id="nombres" required>
@@ -87,6 +88,16 @@
   </div>
 
   <div class="form-field">
+    <label>Experiencia laboral</label>
+    <textarea name="xplaboral" type="textarea" id="xplaboral" cols="20" rows="10" ></textarea>
+  </div>
+
+  <div class="form-field">
+    <label>Formación</label>
+    <textarea name="formacion" type="textarea" id="formacion" cols="20" rows="10" ></textarea>
+  </div>
+
+  <div class="form-field">
     <label>Perfil</label>
     <textarea name="perfil" type="textarea" id="perfil" cols="20" rows="10" ></textarea>
   </div>
@@ -129,11 +140,16 @@
       localStorage.setItem("aptitud", aptitud);
 
       var test = [].slice.apply(document.querySelectorAll('input[type=checkbox]')).filter(function(c){ return c.checked; }).map(function(c){ return c.value; });
-
       localStorage.setItem("habilidades", test);
 
       var perfil = document.getElementById("perfil").value;
       localStorage.setItem("perfil", perfil);
+
+      var xplaboral = document.getElementById("xplaboral").value;
+      localStorage.setItem("xplaboral", xplaboral);
+      
+      var formacion = document.getElementById("formacion").value;
+      localStorage.setItem("formacion", formacion);
 }
 </script>
 </html>
