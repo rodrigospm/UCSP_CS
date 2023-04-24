@@ -1,1 +1,2 @@
 C:\Users\Usuario\Desktop\Sem 3\Ciencia de la Computación II\vsTareas\mergesortpointers\x64\Debug\mergesortpointers.exe
+C:\MyStuff\GitHub\Tarea_Studio\sortpointer\x64\Debug\mergesortpointers.exe

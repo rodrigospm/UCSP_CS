@@ -1,0 +1,60 @@
+.container-1 {
+    color:white;
+    background-color: rgb(110, 110, 110);
+    
+    display:flex;
+    justify-content: center;
+    padding: 25px;;
+  }
+  .Foto{
+    border-radius: 50%;
+    margin: 0 100px;
+    
+  }
+  .container-resto{
+    text-align:left;
+    padding: 25px;
+    margin-top:-5px;
+    margin-bottom:-40px;
+  }
+  .container-ldesordenadas{
+    text-align:left;
+    padding: 25px;
+    margin-top:-5px;
+    margin-bottom:-40px;
+  }
+  .container-end{
+    text-align:left;
+    padding: 25px;
+    margin-top:-5px;
+  }
+  h2 {
+    border-bottom: 2px solid black;
+  }
+  
+  ul {
+    padding-left: 0;
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 900px) {
+    .container-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  #parent {
+    display: flex;
+  }
+  #narrow {
+    width: 1200px;
+    background: white;
+    /* Just so it's visible */
+  }
+  #wide {
+    flex: 1;
+    /* Grow to rest of container */
+    background: rgb(215, 215, 215);
+    /* Just so it's visible */
+  }
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pagina web dinamica</title>
+  <link rel="stylesheet" href="styleform.css">
+</head>
+
+<body>
+
+  <div class="form-container">
+  <h2>Formulario</h2>
+
+  <form action="index.html">  
+  <div class="form-field">
+    <label>Nombre y Apellidos</label>
+    <input name="Nombres" id="nombres" required>
+  </div>
+
+  <div class="form-field">
+    <label>Fecha de nacimiento</label>
+    <input name="Nacimiento" type="date" id="nacimiento" required>
+  </div>
+
+  <div class="form-field">
+    <label>Ocupacion</label>
+    <input name="Ocupacion" type="text" id="ocupacion" required>
+  </div>
+
+  <div class="form-field">
+    <label>Contacto</label>
+    <input name="Contacto" type="text" id="contacto" required>
+  </div>
+
+  <div class="form-field">
+    <label>Nacionalidad</label>
+    <select name="nacionalidad" id="nacionalidad">
+        <option value="Peru" selected>Peru </option>
+        <option value="Chile">Chile </option>
+        <option value="Bolivia"> Bolivia </option>
+        <option value="México"> México </option>
+    </select>   
+  </div>
+
+  <div class="form-field">
+    <label>Nivel de ingles:</label>
+    <label>Basico</label>
+    <input name="ingles" type="radio" id="lenguaje" value="Basico">
+    <label>Intermedio</label>
+    <input name="ingles" type="radio" id="lenguaje2" value="Intermedio">
+    <label>Avanzado</label>
+    <input name="ingles" type="radio" id="lenguaje3" value="Avanzado">
+    <label>Fluido</label>
+    <input name="ingles" type="radio" id="lenguaje4" value="Fluido">
+  </div>
+
+  <div class="form-field">
+    <label>Lenguajes de programacion</label>
+    <select name="programacion" id="programacion" multiple>
+        <option value="Python">Python</option>
+        <option value="Javascript">Javascript</option>
+        <option value="C++">C++</option>
+        <option value="Java">Java</option>
+      </select>
+  </div>
+
+  <div class="form-field">
+    <label>Aptitudes</label>
+    <input list="aptitudes" name="aptitudes" id="aptitud">
+    <datalist id="aptitudes">
+        <option value="Inteligencia artificial">
+        <option value="Desarrollo Web">
+        <option value="Ciberseguridad">
+        <option value="Bases de datos">
+        <option value="Computacion grafica">
+    </datalist>
+  </div>
+
+  <div class="form-field">
+    <label>Habilidades</label>
+    <input class="habilidad" type="checkbox" id="cbox1" value="habilidad1"> <label for="cbox1"> Habilidad 1</label>
+    <input class="habilidad" type="checkbox" id="cbox2" value="habilidad2"> <label for="cbox2"> Habilidad 2</label>
+    <input class="habilidad" type="checkbox" id="cbox3" value="habilidad3"> <label for="cbox3"> Habilidad 3</label>
+  </div>
+
+  <div class="form-field">
+    <label>Perfil</label>
+    <textarea name="perfil" type="textarea" id="perfil" cols="20" rows="10" ></textarea>
+  </div>
+
+  <button class="form-button" type="submit" name="submit" onclick="saveData()"> Send </button>
+  </form>
+
+  </div>
+
+</body>
+<script>
+
+  function saveData() {
+
+      var nombres = document.getElementById("nombres").value;
+      localStorage.setItem("nombres", nombres);
+
+      var nacimiento = document.getElementById("nacimiento").value;
+      localStorage.setItem("nacimiento", nacimiento);
+
+      var ocupacion = document.getElementById("ocupacion").value;
+      localStorage.setItem("ocupacion", ocupacion);
+
+      var contacto = document.getElementById("contacto").value;
+      localStorage.setItem("contacto", contacto);
+
+      var nacionalidad = document.getElementById("nacionalidad").value;
+      localStorage.setItem("nacionalidad", nacionalidad);
+
+      var lenguaje = document.getElementById("lenguaje").value;
+      localStorage.setItem("lenguaje", lenguaje);
+
+      var programacion = document.getElementById("programacion");
+      var programacion_select = [...programacion.options]
+        .filter(option => option.selected)
+        .map(option => option.value);
+      localStorage.setItem("programacion", programacion_select);
+
+      var aptitud = document.getElementById("aptitud").value;
+      localStorage.setItem("aptitud", aptitud);
+
+      var test = [].slice.apply(document.querySelectorAll('input[type=checkbox]')).filter(function(c){ return c.checked; }).map(function(c){ return c.value; });
+
+      localStorage.setItem("habilidades", test);
+
+      var perfil = document.getElementById("perfil").value;
+      localStorage.setItem("perfil", perfil);
+}
+</script>
+</html>

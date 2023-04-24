@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include "pila.h"
 
 using namespace std;
@@ -40,3 +40,4 @@ int main() {
     pila.Push(5);
     cout << pila.Pop();
 }
+*/

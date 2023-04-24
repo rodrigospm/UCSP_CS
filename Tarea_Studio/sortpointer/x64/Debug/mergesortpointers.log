@@ -1,9 +1,2 @@
 ﻿  sort.cpp
-C:\Users\Usuario\Desktop\Sem 3\Ciencia de la Computación II\vsTareas\mergesortpointers\sort.cpp(7,11): error C2131: la expresión no se evaluó como una constante
-C:\Users\Usuario\Desktop\Sem 3\Ciencia de la Computación II\vsTareas\mergesortpointers\sort.cpp(7,11): message : el error se debió a una lectura de una variable fuera de su duración
-C:\Users\Usuario\Desktop\Sem 3\Ciencia de la Computación II\vsTareas\mergesortpointers\sort.cpp(7,11): message : consulte el uso de 'n1'
-C:\Users\Usuario\Desktop\Sem 3\Ciencia de la Computación II\vsTareas\mergesortpointers\sort.cpp(7,18): error C2131: la expresión no se evaluó como una constante
-C:\Users\Usuario\Desktop\Sem 3\Ciencia de la Computación II\vsTareas\mergesortpointers\sort.cpp(7,18): message : el error se debió a una lectura de una variable fuera de su duración
-C:\Users\Usuario\Desktop\Sem 3\Ciencia de la Computación II\vsTareas\mergesortpointers\sort.cpp(7,18): message : consulte el uso de 'n2'
-C:\Users\Usuario\Desktop\Sem 3\Ciencia de la Computación II\vsTareas\mergesortpointers\sort.cpp(9,14): error C3863: el tipo de matriz 'int [n1]' no es asignable
-C:\Users\Usuario\Desktop\Sem 3\Ciencia de la Computación II\vsTareas\mergesortpointers\sort.cpp(12,14): error C3863: el tipo de matriz 'int [n2]' no es asignable
+  mergesortpointers.vcxproj -> C:\MyStuff\GitHub\Tarea_Studio\sortpointer\x64\Debug\mergesortpointers.exe
