@@ -1,1 +1,2 @@
 C:\MyStuff\GitHub\Tarea_Studio\pilacola\x64\Debug\pilacola.exe
+C:\MyStuff\GitHub\CC2\pilacola\x64\Debug\pilacola.exe

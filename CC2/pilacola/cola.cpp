@@ -15,7 +15,7 @@ void Cola::Push(int v) {
             *tail = v;
         }
         else {
-            cout << "Pila llena" << endl;
+            cout << "Cola llena" << endl;
         }
     }
 }
@@ -43,6 +43,7 @@ int Cola::Pop() {
 
 int main() {
     Cola cola;
+    /*
     cola.Push(1);
     cola.Push(2);
     cola.Push(3);
@@ -65,4 +66,26 @@ int main() {
     cout << cola.Pop() << " ";
     cout << cola.Pop() << " ";
     cout << cola.Pop() << " ";
+    */
+    for (int i = 1; i < 15; i++) {
+        cola.Push(i); // 4 cola llena
+    }
+    cout << "\n";
+    for (int i = 1; i < 15; i++) {
+        cola.Pop(); // 4 cola vacia
+    }
+    cout << "\n";
+    for (int i = 1; i < 8; i++) {
+        cola.Push(i);
+    }
+    for (int i = 1; i < 4; i++) {
+        cola.Pop();
+    }
+    for (int i = 1; i < 11; i++) {
+        cola.Push(i); // 6 cola llena
+    }
+    cout << "\n";
+    for (int i = 1; i < 13; i++) {
+        cola.Pop(); // 2 cola vacia
+    }
 }
