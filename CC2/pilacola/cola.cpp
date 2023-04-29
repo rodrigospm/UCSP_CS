@@ -1,10 +1,9 @@
 #include <iostream>
 #include "cola.h"
-
 using namespace std;
 
 void Cola::Push(int v) {
-    if (!head) {
+    if (!head) { // Cuando la cola esta vacia, head y tail nulos
         head = inicio;
         tail = inicio;
         *tail = v;
@@ -12,14 +11,25 @@ void Cola::Push(int v) {
     else {
         if (tail < fin) {
             tail++;
-            *tail = v;
+            if (tail == head) {
+                cout << "Cola llena" << endl;
+                tail--;
+            }
+            else {
+                *tail = v;
+            }
         }
         else {
-            cout << "Cola llena" << endl;
+            if (head != inicio) {
+                tail = inicio; // Mandar al comienzo del array
+                *tail = v;
+            }
+            else {
+                cout << "Cola llena" << endl;
+            }
         }
     }
 }
-
 /*
 head = inicio;
 tail = head;
@@ -27,15 +37,21 @@ tail = head;
 */
 int Cola::Pop() {
     int tmp = 0;
-    if (head) {
+    // cout << head << " " << tail << " ";
+    if (head) { // Si hay algo, que no sea nulo, entra al if
         tmp = *head;
-        head++;
-        if (head > tail) {
+        if (head == tail) {
             head = nullptr;
             tail = nullptr;
         }
+        else {
+            head++;
+            if (head > fin) {
+                head = inicio;
+            }
+        }
     }
-    else {
+    else { // Si es nulo cola vacia
         cout << "Cola vacia" << endl;
     }
     return tmp;
@@ -67,25 +83,31 @@ int main() {
     cout << cola.Pop() << " ";
     cout << cola.Pop() << " ";
     */
+    cout << "\n";
     for (int i = 1; i < 15; i++) {
         cola.Push(i); // 4 cola llena
     }
     cout << "\n";
     for (int i = 1; i < 15; i++) {
         cola.Pop(); // 4 cola vacia
+        // cout << cola.Pop() << " - "; // 4 cola vacia
     }
     cout << "\n";
     for (int i = 1; i < 8; i++) {
         cola.Push(i);
     }
+    cout << "\n";
     for (int i = 1; i < 4; i++) {
         cola.Pop();
+        // cout << cola.Pop() << " - ";
     }
+    cout << "\n";
     for (int i = 1; i < 11; i++) {
-        cola.Push(i); // 6 cola llena
+        cola.Push(i); // 4 cola llena
     }
     cout << "\n";
     for (int i = 1; i < 13; i++) {
         cola.Pop(); // 2 cola vacia
+        // cout << cola.Pop() << " - "; // 2 cola vacia
     }
 }
