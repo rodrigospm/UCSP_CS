@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="../css/reservation_style.css">
+    <script src="https://kit.fontawesome.com/e14baa4332.js" crossorigin="anonymous"></script></head>
+<body>
+    <div class="container">
+        <header>RESERVATION</header>
+        <div class="progreso">
+            <div class="paso">
+                <p>Paso 1</p>
+                <div class="num">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="paso">
+                <p>Paso 2</p>
+                <div class="num">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="paso">
+                <p>Paso 3</p>
+                <div class="num">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="paso">
+                <p>Paso 4</p>
+                <div class="num">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+        </div>
+        <div class="formulario">
+            <form action="recibir_reservation.php" method="POST">
+
+                <!--pagina 1-->
+                <div class="pagina movpag">
+                    <div class="titulo">DATOS</div>
+                    <div class="campo">
+                        <div class="label">Nombre:</div>
+                        <input type="text" id="nombre" placeholder="Nombres" name="name">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Aplellido:</div>
+                        <input type="text" id="apellido" placeholder="Apellidos" name="last_name">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Hotel:</div>
+                        <input type="text" id="hotel" placeholder="Hotel" name="inn">
+                    </div>
+                    <div class="campo sigpag">
+                        <button>siguiente</button>
+                    </div>
+                </div>
+                <!--pagina 2-->
+                <div class="pagina">
+                    <div class="titulo">DURACION</div>
+                    <div class="campo">
+                        <div class="label">Fecha de entrada:</div>
+                        <input type="date" id="fecha_entrada" name="date_entry">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Fecha de salida:</div>
+                        <input type="date" id="fecha_salida" name="date_end">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Adultos</div>
+                        <input type="number" id="adultos" placeholder="minimo 1 adulto" min="1" name="adults">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Niños</div>
+                        <input type="number" id="niños" placeholder="" value="0" min="0" name="kids">
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-pag1 volver">atras</button>
+                        <button class="adelantar-pag3 adelante">siguiente</button>
+                    </div>
+                </div>
+
+                <!--pagina 3-->
+                <div class="pagina">
+                    <div class="titulo">SERVICIOS</div>
+                    <div class="campo">
+                        <div class="label">Habitaciones:</div>
+                        <input type="number" id="habitaciones" placeholder="min 1 habitacion" min="1" name="rooms">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Clase:</div>
+                        <select id="clase"  name="class">
+                            <option value="-1" disabled selected>selecciona uno</option>
+                            <option value="0">Economica</option>
+                            <option value="1">Comercial</option>
+                            <option value="2">Suite</option>
+                            <option value="3">Presidencial</option>
+                        </select>
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-pag2 volver">atras</button>
+                        <button class="adelantar-pag4 adelante">siguiente</button>
+                    </div>
+                </div>
+                <!--pagina 4-->
+                <div class="pagina">
+                    <div class="titulo">METODO DE PAGO</div>
+                    <div class="campo">
+                        <div class="label">Numero de tarjeta:</div>
+                        <input type="text" id="numero_tarjeta" placeholder="---- ---- ---- ----" name="card">
+                    </div>
+                    <div class="campo">
+                        <div class="label">fecha de expiracion:</div>
+                        <input type="text" id="fecha_expiracion" placeholder="--/--" name="date_expiration">
+                    </div>
+                    <div class="campo">
+                        <div class="label">codigo de seguridad</div>
+                        <input type="text" id="codigo_seguridad" placeholder="---" name="security_code">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Direccion de facturacion:</div>
+                        <input type="text" id="direccion_fact" placeholder="PAIS , CIUDAD, DIRECCION" name="adress">
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-pag3 volver">atras</button>
+                        <button type="submit" class="fin" >PAGAR</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+  
+    <script src="../js/reservation_script.js"></script>
+
+   
+</body>
+</html>

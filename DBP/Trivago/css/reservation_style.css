@@ -1,0 +1,230 @@
+
+  /*h1 {
+    color: blue;
+  }
+  p {
+    color: red;
+  }*/
+  *{
+    margin:0;
+    padding: 0;
+    outline: none;
+    font-family: serif;
+  }
+  body {
+    background-color: rgb(88, 18, 13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(../img/reservation_bk.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .container{
+    width: 350px;
+    background: #fff;
+    border-radius: 7px;
+    text-align: center;
+    padding: 30px 35px 0 35px;/*sup izq abajo der*/
+
+  } 
+
+  .container header{
+    font-size: 28xp;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+  }
+
+  .container .formulario{
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .formulario form{
+    display: flex;
+    width: 400%;
+  }
+
+  .formulario form .pagina{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+  }
+
+  .formulario form .pagina .titulo{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .formulario form .pagina .campo{
+    height: 35px;
+    width: 350px;
+    margin: 40px 0;
+    display: flex;
+    position: relative;
+  }
+
+  .formulario form .pagina .campo .label{
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: italic;
+    float: left;
+    text-align: left;
+    width: 100%;
+  }
+
+  .formulario form .pagina .campo input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+  }
+
+.formulario form .pagina .campo select{
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+.formulario form .pagina .campo button{
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    background: rgb(126, 126, 126);
+    border-radius: 7px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.formulario form .pagina .campo button:hover{/*al pasar el mouse por el boton*/
+    background: #090d2c;
+}
+  
+form .pagina .btns button{
+     margin-top: -20px!important;
+}
+
+form .pagina .btns button .volver{
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .pagina .btns button .adelante{
+    margin-left: 3px;
+
+}
+
+.container .progreso{
+    display: flex;
+    margin: 40px 0;
+}
+
+.container .progreso .paso{
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.progreso .paso p{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(126, 126, 126);
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+
+.progreso .paso p.active{
+    color: #090d2c;
+}
+
+.progreso .paso  .num{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgb(126, 126, 126);
+    border-radius: 50%;
+    display: inline-block;/*dara un tipo de caja*/
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    transition: 0.2s;
+}
+
+.progreso .paso  .num.active{
+    border-color: #090d2c;
+    background: #090d2c;
+}
+
+.progreso .paso  .num span{
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);/*mover elemento por el eje x*/
+}
+
+.progreso .paso  .num.active span{
+    display: none;
+}
+
+.progreso .paso .check{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%,-50%);
+}
+
+.progreso .paso .check.active{
+    display:block;
+    color: white;
+}
+
+/*pseudoelemento*/
+.progreso .paso .num:before,
+.progreso .paso .num:after{
+    position: absolute;
+    content: '';
+    width: 44px;
+    height: 3px;
+    bottom: 11px;
+    right: -53px;
+    background: rgb(126, 126, 126);
+}
+/*eliminar ultimo elemento*/
+.progreso .paso:last-child .num:before,
+.progreso .paso:last-child .num:after{
+    display:none;
+}
+
+.progreso .paso .num.active:after{
+    background: #090d2c;
+    animation: mov_linea 0.3s linear forwards;
+    transform: scale(0);
+    transform-origin: left;
+}
+
+@keyframes mov_linea {
+    100%{
+        transform: scaleX(1);
+    }
+    
+}
+
+

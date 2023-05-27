@@ -32,7 +32,6 @@ void sort(int* p, int* q) {
 void sort(int* p, int* q) {
     int tmp;
     int* fin = p + (q - p);
-
     while ((p < q) && (q < fin)) {
         if (*p < *q) {
             p++;
