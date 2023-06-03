@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>DBP</title>
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+  </head>
+  <body>
+    <p>Computer Science</p>
+    <h1>Tasks</h1>
+    <form id="new-task">
+        <input id="task" autocomplete="off"
+        autofocus placeholder="" type="text">
+
+        <input type="submit" value="Add Todo">
+        <br>
+        <br>
+        <input type="button" value="Complete All" id="complete-all">
+    </form>
+    <ol id="tasks">
+    </ol>
+
+      
+    </body>
+</html>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#new-task').onsubmit = () => {
+        const cb = document.createElement("INPUT");
+        cb.setAttribute("type", "checkbox");
+
+        const li = document.createElement('li');
+        li.appendChild(cb);
+
+        const taskText = document.querySelector('#task').value;
+        const taskContent = document.createElement('span');
+        taskContent.innerText = taskText;
+        li.appendChild(taskContent);
+
+        const deleteButton = document.createElement('input');
+        deleteButton.setAttribute("type", "checkbox");
+        deleteButton.addEventListener('change', () => {
+            if (deleteButton.checked) {
+                li.remove();
+            }
+        });
+        li.appendChild(deleteButton);
+
+        cb.addEventListener('change', () => {
+            if (cb.checked) {
+                taskContent.classList.add('completed');
+            } else {
+                taskContent.classList.remove('completed');
+            }
+        });
+
+        document.querySelector('#tasks').append(li);
+        document.querySelector('#task').value = '';
+
+        return false;
+    };
+    
+    document.querySelector('#complete-all').onclick = () => {
+        const checkboxes = document.querySelectorAll('#tasks li input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = true;
+            checkbox.dispatchEvent(new Event('change'));
+        });
+    };
+
+});
+</script>
