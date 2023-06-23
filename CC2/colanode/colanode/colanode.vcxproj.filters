@@ -21,9 +21,6 @@
     <ClCompile Include="nodo.cpp">
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
-    <ClCompile Include="cola.cpp">
-      <Filter>Archivos de recursos</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cola.h">

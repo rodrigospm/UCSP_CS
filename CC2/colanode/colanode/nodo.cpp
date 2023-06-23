@@ -6,29 +6,26 @@ using namespace std;
 // Parametros nodo
 
 template<class T>
-Nodo<T>::Nodo(T val) {
+Nodo<T>::Nodo(T v) {
     next = NULL;
-    valor = val;
+    valor = v;
 }
 
-// Establece el puntero al nodo siguiente
 template<class T>
 void Nodo<T>::setNext(Nodo<T>* nxt) {
     next = nxt;
 }
 
 template<class T>
-void Nodo<T>::setValor(T val) {
-    valor = val;
+void Nodo<T>::setValor(T v) {
+    valor = v;
 }
 
-// Se obtiene el puntero al siguiente
 template<class T>
-Nodo<T>* Nodo<T>::getNext() {
+Nodo<T>* Nodo<T>::getNext() { 
     return next;
 }
 
-// Se obtiene el contenido del nodo
 template<class T>
 T Nodo<T>::getValor() {
     return valor;
@@ -43,7 +40,7 @@ void Cola<T>::Push(T x) {
     tailNext = new Nodo<T>(x);
     tailNext->setValor(x);
     tailNext->setNext(NULL);
-    if (Vacia()) {
+    if (!head) {
         head = tailNext;
         tail = tailNext;
     }
@@ -55,7 +52,7 @@ void Cola<T>::Push(T x) {
 
 template<class T>
 int Cola<T>::Pop() {
-    if (!Vacia()) {
+    if (!head) {
         T content = head->getValor();
         Nodo<T>* tmp = head;
         if (head == tail) {
@@ -81,14 +78,6 @@ void Cola<T>::Print() {
         tmpi = tmpi->getNext();
     }
     cout << endl;
-}
-
-template<class T>
-bool Cola<T>::Vacia() {
-    if (head == NULL)
-        return true;
-    else
-        return false;
 }
 
 template<class T>

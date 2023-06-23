@@ -6,7 +6,6 @@ template <class T>
 struct Nodo {
 	T valor;
 	Nodo <T>* next; 
-    // Nodo <T>* prev;
 
 public:
     Nodo(T);

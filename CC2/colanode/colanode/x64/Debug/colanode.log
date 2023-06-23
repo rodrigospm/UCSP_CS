@@ -1,6 +1,4 @@
-﻿  cola.cpp
-  nodo.cpp
+﻿  nodo.cpp
   nodo.h
   Generando código...
-x64\Debug\nodo.obj : warning LNK4042: objeto especificado más de una vez; omitidos los sobrantes
-  colanode.vcxproj -> C:\MyStuff\GitHub\CC2\colanode\x64\Debug\colanode.exe
+  colanode.vcxproj -> C:\Users\ALUMNO-B303\Documents\tmp\colanode\x64\Debug\colanode.exe

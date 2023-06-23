@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CVApp.CV">
+
+<ScrollView>
+        <AbsoluteLayout BackgroundColor="White">
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="DarkGray">
+                    <Label Text="Jose Martinez" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline" />
+                    <Label Text="PUESTO OCUPADO / BUSCADO" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="LightGray">
+                    <Label Text="Contacto" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline" />
+                    <Label Text="Numero" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Email" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Pais" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="linkedIn.com/jose-martinez" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="0" BackgroundColor="LightGray">
+                    <Label Text="Idiomas" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline" />
+                    <Label Text="Español Nativo" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Ingles: Bilingue (TOEIC 950)" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Frances: Intermedio (B2)" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" Grid.Column="0" BackgroundColor="LightGray">
+                    <Label Text="Aptitudes" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline" />
+                    <Label Text="Inteligencia emocional" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Espiritu critico" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Trabajo en equipo" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Capacidad analítica" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Habilidades físicas" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="4" Grid.Column="0" BackgroundColor="LightGray">
+                    <Label Text="Habilidades" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline" />
+                    <Label Text="Acondicionamiento fisico" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Creación videos deportivos" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Pack office" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Tennis" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="1" BackgroundColor="White">
+                    <Label Text="Perfil" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline" />
+                    <Label Text="Trabajador Social con 4 años de experiencia en proyectos
+                colectivos. Mi ojetivo es lograr que los jóvenes obtengan acceso
+                a la educación superior mediante logros deportvos" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" BackgroundColor="White">
+                    <Label Text="Experiencia laboral" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline" />
+                    <Label Text="Trabajador Social" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" />
+                    <Label Text="México DF, | 2022 - Actualmente" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" />
+                    <Label Text="- Coordinador y mediador entre los equipos de ayuda psicológica a jovenes y niños en exclusión social" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="- Velar por la salud mental del equipo y de miembros involucrados en proyectos" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="- Mapeo de necesidades estrategicas y logicas para las diferentes áreas" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="- Monitor de ejercicios fisicos para adolescentes" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="- Programar diferentes actividades extracurriculares" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="4" Grid.Column="1" BackgroundColor="White">
+                    <Label Text="Formación" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline" />
+                    <Label Text="Grado de Trabajo Social" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" />
+                    <Label Text="ESMA, Madrid | 2012- 2015" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label Text="Licenciatura Profesional" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" />
+                    <Label Text="Universidad de la Frontera, México DF | 2011 - 2012" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+        </AbsoluteLayout>
+
+    </ScrollView>
+    
+</ContentPage>

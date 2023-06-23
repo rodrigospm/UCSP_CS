@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CVApp.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
+                <Label Text="Formulario CV" HorizontalTextAlignment="Center" TextColor="LightGray" FontSize="36"/>
+            </Frame>
+        
+            <Label Text="Ingrese sus datos" FontSize="Title" Padding="30,10,30,10"/>
+
+            <!--Nombre y Apellidos | text-->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Nombres y Apellidos:" FontSize="16" Padding="30,0,30,0"/>
+                <Entry Placeholder="Completar" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <!--Fecha de Nacimiento | time-->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Fecha de Nacimiento:" FontSize="16" Padding="30,0,30,0"/>
+                <DatePicker HorizontalOptions="Center" />
+            </StackLayout>
+
+            <!--Ocupación | text-->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Ocupación:" FontSize="16" Padding="30,0,30,0"/>
+                <Entry Placeholder="Completar" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <!--Contacto (telefono, email) | text-->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Contacto:" FontSize="16" Padding="30,0,30,0"/>
+                <Entry Placeholder="Telefono" HorizontalOptions="Center"/>
+                <Entry Placeholder="Email" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <!--Nacionalidad | select option-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nacionalidad:" FontSize="16" Padding="30,0,30,0" />
+                <Picker Title="Seleccionar nacionalidad" HorizontalOptions="Center" x:Name="nationalityPicker">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Peru</x:String>
+                            <x:String>Chile</x:String>
+                            <x:String>Bolivia</x:String>
+                            <x:String>Mexico</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+
+            <!-- Nivel de ingles: básico, intermedio, avanzado, fluido | select radio -->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nivel de Ingles:" FontSize="16" Padding="30,0,30,0" />
+
+                <StackLayout Orientation="Vertical">
+                    <RadioButton GroupName="nameGroup" />
+                    <Label Text="Basico" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+                    <RadioButton GroupName="nameGroup" />
+                    <Label Text="Intermedio" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+                    <RadioButton GroupName="nameGroup" />
+                    <Label Text="Avanzado" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+                    <RadioButton GroupName="nameGroup" />
+                    <Label Text="Fluido" VerticalOptions="Center" />
+                </StackLayout>
+            </StackLayout>
+
+            <!--Lenguajes de programación: select option multiple-->
+            <StackLayout Orientation="Vertical">
+                <Label Text="Lenguajes de programación:" FontSize="16" Padding="30,0,30,0" />
+
+                <Picker Title="Seleccionar lenguajes" HorizontalOptions="Center" 
+                    x:Name="LenguajesPicker">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Python</x:String>
+                            <x:String>JavaScript</x:String>
+                            <x:String>C++</x:String>
+                            <x:String>Java</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+
+            <!--Aptitudes | datalist-->
+            <StackLayout Orientation="Vertical">
+                <Label Text="Aptitudes:" FontSize="16" Padding="30,0,30,0" />
+                <ListView x:Name="AptitudesListView" HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+                    <ListView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Inteligencia Artificial</x:String>
+                            <x:String>Desarrollo Web</x:String>
+                            <x:String>Ciberseguridad</x:String>
+                            <x:String>Bases de datos</x:String>
+                            <x:String>Computacion grafica</x:String>
+                        </x:Array>
+                    </ListView.ItemsSource>
+                </ListView>
+            </StackLayout>
+
+            <!--Habilidades | selection checkbox-->
+            <StackLayout Orientation="Vertical">
+                <Label Text="Habilidades:" FontSize="16" Padding="30,0,30,0" />
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                    <CheckBox IsChecked="{Binding Creatividad}" />
+                    <Label Text="Creatividad" />
+                    <CheckBox IsChecked="{Binding Persuasion}" />
+                    <Label Text="Persuasión" />
+                    <CheckBox IsChecked="{Binding Colaboracion}" />
+                    <Label Text="Colaboración" />
+                    <CheckBox IsChecked="{Binding Adaptabilidad}" />
+                    <Label Text="Adaptabilidad" />
+                </StackLayout>
+            </StackLayout>
+
+            <!--Perfil | textarea-->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Perfil:" FontSize="16" Padding="30,0,30,0"/>
+                <Entry Placeholder="Completar" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Experiencia laboral:" FontSize="16" Padding="30,0,30,0"/>
+                <Entry Placeholder="Completar" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Formación:" FontSize="16" Padding="30,0,30,0"/>
+                <Entry Placeholder="Completar" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Idiomas:" FontSize="16" Padding="30,0,30,0"/>
+                <Entry Placeholder="Completar" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <Button Text="Enviar" HorizontalOptions="Center" VerticalOptions="EndAndExpand"
+                Clicked="OnNextButtonClicked" />
+
+            <Label FontSize="16" Padding="30,24,30,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Learn more at "/>
+                            <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

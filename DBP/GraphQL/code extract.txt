@@ -1,0 +1,12 @@
+Extraccion de datos para un grafo ejemplo
+{estudiantes{
+  edges{
+    node{
+      cuenta
+      nombre
+      primerApellido
+      promedio
+    }
+  }
+} 
+}

@@ -1,0 +1,19 @@
+[{"cuenta": 1221,
+    "al_corriente": false,
+    "carrera": "Arquitectura",
+    "nombre": "Pedro",
+    "primer_apellido": "Solis",
+    "promedio": 8.9,
+    "semestre": 3,
+    "segundo_apellido": "Ordoñez"
+},
+{"cuenta": 1222,
+    "al_corriente": false,
+    "carrera": "Psicologia",
+    "nombre": "Yolanda",
+    "primer_apellido": "Jimenez",
+    "promedio": 9.1,
+    "semestre": 2,
+    "segundo_apellido": "Valdivia"
+}
+]

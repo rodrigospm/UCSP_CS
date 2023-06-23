@@ -12,7 +12,6 @@ public:
     void Push(T);
     int Pop(); // bool
     void Print();
-    bool Vacia();
     ~Cola();
 };
 

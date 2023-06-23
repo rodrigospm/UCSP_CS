@@ -1,0 +1,16 @@
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\bin\Debug\netstandard2.0\CVApp.deps.json
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\bin\Debug\netstandard2.0\CVApp.dll
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\bin\Debug\netstandard2.0\ref\CVApp.dll
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\bin\Debug\netstandard2.0\CVApp.pdb
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\CVApp.csproj.AssemblyReference.cache
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\CVApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\CVApp.AssemblyInfoInputs.cache
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\CVApp.AssemblyInfo.cs
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\CVApp.csproj.CoreCompileInputs.cache
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\CVApp.dll
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\refint\CVApp.dll
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\CVApp.pdb
+C:\MyStuff\GitHub\DBP\CVApp\CVApp\obj\Debug\netstandard2.0\CV.xaml.g.cs

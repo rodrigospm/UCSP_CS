@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cola.cpp" />
     <ClCompile Include="nodo.cpp" />
     <ClCompile Include="nodo.h" />
   </ItemGroup>

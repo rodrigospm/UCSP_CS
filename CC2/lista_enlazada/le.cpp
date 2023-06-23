@@ -2,48 +2,48 @@
 using namespace std;
 
 template<class T>
-class Node {
-    T dato;
-    Node<T>* siguiente;
+class Nodo {
+    T valor;
+    Nodo<T>* next;
 public:
-    Node(T);
-    void setSiguiente(Node<T>*);
-    void setDato(T);
-    Node<T>* getSiguiente();
-    T getDato();
+    Nodo(T);
+    void setNext(Nodo<T>*);
+    void setValor(T);
+    Nodo<T>* getNext();
+    T getValor();
 }; 
 
-// Constructor
 template<class T>
-Node<T>::Node(T _dato) {
-    siguiente = NULL;
-    dato = _dato;
-}
-
-// Establece el puntero al nodo siguiente
-template<class T>
-void Node<T>::setSiguiente(Node<T>* _siguiente) {
-    siguiente = _siguiente;
+Nodo<T>::Nodo(T v) {
+    next = NULL;
+    valor = v;
 }
 
 template<class T>
-void Node<T>::setDato(T _dato) {
-    dato = _dato;
-}
-// Se obtiene el puntero al siguiente
-template<class T>
-Node<T>* Node<T>::getSiguiente() {
-    return siguiente;
-}
-// Se obtiene el contenido del nodo
-template<class T>
-T Node<T>::getDato() {
-    return dato;
+void Nodo<T>::setNext(Nodo<T>* nxt) {
+    next = nxt;
 }
 
 template<class T>
-class LE {
-    Node<T>* head;
+void Nodo<T>::setValor(T v) {
+    valor = v;
+}
+
+template<class T>
+Nodo<T>* Nodo<T>::getNext() {
+    return next;
+}
+
+template<class T>
+T Nodo<T>::getValor() {
+    return valor;
+}
+
+// -+-+-+-+-+-+-+-+-+- // 
+
+template<class T>
+class LE{
+    Nodo<T>* head;
     int tam;
 public:
     LE();//constructor
@@ -76,171 +76,149 @@ LE<T>::LE() {
 }
 
 template<class T>
-void LE<T>::push_back(T dato)
-{
-    Node<T>* aux = new Node<T>(dato);
+void LE<T>::push_back(T dato) {
+    Nodo<T>* aux = new Nodo<T>(dato);
 
     if (head == NULL)
         head = aux;
 
-    else
-    {
-        Node<T>* ptr = head;
-        while (ptr->getSiguiente() != NULL)
-            ptr = ptr->getSiguiente();
-        ptr->setSiguiente(aux);
+    else {
+        Nodo<T>* ptr = head;
+        while (ptr->getNext() != NULL)
+            ptr = ptr->getNext();
+        ptr->setNext(aux);
     }
     tam++;
 }
 
 template<class T>
-void LE<T>::push_front(T dato)
-{
-    Node<T>* aux = new Node<T>(dato);
-    aux->setSiguiente(head);
+void LE<T>::push_front(T dato) {
+    Nodo<T>* aux = new Nodo<T>(dato);
+    aux->setNext(head);
     head = aux;
     tam++;
 }
 
 template<class T>
-void LE<T>::add(T dato, int n)
-{
-    Node<T>* aux = new Node<T>(dato);
-
+void LE<T>::add(T dato, int n) {
+    Nodo<T>* aux = new Nodo<T>(dato);
     if (n > tam)
         cout << "introduzca un numero menor al tamaño de la lista";
-    else if (n == 0)
-    {
-        aux->setSiguiente(head);
+    else if (n == 0) {
+        aux->setNext(head);
         head = aux;
     }
     if (head == NULL)
         head = aux;
-    else
-    {
+    else {
         int cont = 0;
-        Node<T>* puntero = head;
-        while (cont < (n - 1))
-        {
-            puntero = head->getSiguiente();
+        Nodo<T>* puntero = head;
+        while (cont < (n - 1)) {
+            puntero = head->getNext();
             cont++;
         }
-        aux->setSiguiente(puntero->getSiguiente());
-        puntero->setSiguiente(aux);
+        aux->setNext(puntero->getNext());
+        puntero->setNext(aux);
     }
     tam++;
 }
 
 template<class T>
-T LE<T>::get_front()
-{
+T LE<T>::get_front() {
     if (tam == 0)
         return NULL;
-    return (head->getDato());
+    return (head->getValor());
 }
 
 template<class T>
-T LE<T>::get_back()
-{
+T LE<T>::get_back() {
     if (tam == 0)
         return NULL;
-    Node<T>* ptr = head;
-    while (ptr->getSiguiente() != NULL)
-        ptr = ptr->getSiguiente();
-    return (ptr->getDato());
+    Nodo<T>* ptr = head;
+    while (ptr->getNext() != NULL)
+        ptr = ptr->getNext();
+    return (ptr->getValor());
 
 }
 
 template<class T>
-T LE<T>::get(int n)
-{
+T LE<T>::get(int n) {
     if (n >= tam)
         return NULL;
-    Node<T> ptr = head;
+    Nodo<T> ptr = head;
     int cont = 0;
     while (cont < n)
-        ptr = ptr->getSiguiente();
-    return (ptr->getDato());
+        ptr = ptr->getNext();
+    return (ptr->getValor());
 }
 
 template<class T>
-void LE<T>::eliminar_front()
-{
+void LE<T>::eliminar_front() {
     if (tam == 0) return;
-    Node<T>* elimnado = head;
-    head = head->getSiguiente();
+    Nodo<T>* elimnado = head;
+    head = head->getNext();
     delete elimnado;
     tam--;
 }
 
 
 template<class T>
-void LE<T>::eliminar_back()
-{
+void LE<T>::eliminar_back() {
     if (tam == 0)
         return;
     if (tam == 1)
         eliminar_front();
-    else
-    {
-        Node<T>* ptr = head;
-        while (ptr->getSiguiente()->getSiguiente() != NULL)
-            ptr = ptr->getSiguiente();
-        Node<T>* eliminado = ptr->getSiguiente();
-        ptr->setSiguiente(NULL);
+    else {
+        Nodo<T>* ptr = head;
+        while (ptr->getNext()->getNext() != NULL)
+            ptr = ptr->getNext();
+        Nodo<T>* eliminado = ptr->getNext();
+        ptr->setNext(NULL);
         delete eliminado;
         tam--;
     }
 }
 
 template <class T>
-void LE<T>::eliminar(int n)
-{
+void LE<T>::eliminar(int n) {
     if (n >= tam)
         return;
     if (n == 0)
         eliminar_front();
-    else
-    {
-        Node<T>* ptr = head;
+    else {
+        Nodo<T>* ptr = head;
         int cont = 0;
-        while (cont < (n - 1))
-        {
-            ptr = ptr->getSiguiente();
+        while (cont < (n - 1)) {
+            ptr = ptr->getNext();
             cont++;
         }
-        Node<T>* eliminado = ptr->getSiguiente();
-        ptr->setSiguiente(eliminado->getSiguiente());
+        Nodo<T>* eliminado = ptr->getNext();
+        ptr->setNext(eliminado->getNext());
         delete eliminado;
         tam--;
     }
 }
 
 template<class T>
-void LE<T>::mostrar()
-{
-    Node<T>* ptr = head;
-    for (int i = 0; i < tam; i++)
-    {
-        cout << ptr->getDato() << " ";
-        ptr = ptr->getSiguiente();
+void LE<T>::mostrar() {
+    Nodo<T>* ptr = head;
+    for (int i = 0; i < tam; i++) {
+        cout << ptr->getValor() << " ";
+        ptr = ptr->getNext();
     }
     cout << endl;
 }
 
 template<class T>
-LE<T>::~LE()
-{
-    for (int i = 0; i < tam; i++)
-    {
-        Node<T>* lista = head;
-        head = head->getSiguiente();
+LE<T>::~LE() {
+    for (int i = 0; i < tam; i++) {
+        Nodo<T>* lista = head;
+        head = head->getNext();
         delete lista;
     }
 }
 
-int main()
-{
+int main() {
     LE<int> l1;
     l1.push_back(0);
     l1.push_back(5);
@@ -264,3 +242,6 @@ int main()
     l1.mostrar();
     return 0;
 }
+
+// Lista enlazada circular
+// Mezcla de listas enlazadas (Crear LE y hacer una funcion que los head mezcle las listas)
